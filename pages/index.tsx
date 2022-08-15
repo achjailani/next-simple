@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Welcome from '../component/welcome'
+import { Menu, Layout } from 'antd';
+import { AppstoreOutlined } from '@ant-design/icons';
+const { Header, Content, Footer } = Layout;
 
 const Home: NextPage = () => {
   return (
@@ -14,50 +16,38 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Welcome></Welcome>
+      <Layout className="layout">
+        <Header>
+          <Menu mode="horizontal" defaultSelectedKeys={['mail']}>
+            <Menu.SubMenu key="SubMenu" title="Navigation Two - Submenu" icon={<AppstoreOutlined />}>
+              <Menu.Item key="one" icon={<AppstoreOutlined />}>
+                <Link href="/pdf/viewer">
+                  <a> Pdf Viewer </a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="two" icon={<AppstoreOutlined />}>
+                <Link href="/pdf/nano-coverter">
+                  <a>Converter to Hell</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="thre  e" icon={<AppstoreOutlined />}>
+                <Link href="/pdf/nano-coverter">
+                  <a>Converter to Jail</a>
+                </Link>
+              </Menu.Item>
+            </Menu.SubMenu>
+          </Menu>
+        </Header>
 
-        <div className={styles.grid}>
-          <Link href="/pdf/viewer" className={styles.card}>
-            <a>
-              <h2>Pdf Viewer &rarr;</h2>
-              <p>Find in-depth how to view pdf shitly and get desired coordinate</p>
-            </a>
-          </Link>
+        <Content style={{ padding: '0 50px' }}>
+          <Welcome></Welcome>
+        </Content>
+      </Layout>
 
-          <Link href="pdf/nano-coverter" className={styles.card}>
-            <a>
-              <h2>Convert to Hell &rarr;</h2>
-              <p>Convert Lower Left Y, Lower Left X, Upper Right Y, Upper Right X to X Y coordinate</p>
-            </a>
-          </Link>
 
-          <Link
-            href="#"
-            className={styles.card}
-          >
-            <a>
-              <h2>Convert to Jail &rarr;</h2>
-              <p>Convert X Y coordinate to Lower Left Y, Lower Left X, Upper Right Y, Upper Right X.</p>
-            </a>
-          </Link>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-      <Link 
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer">
-        <a>
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </Link>
-        
-      </footer>
+      {/* <main className={styles.main}> */}
+       
+      {/* </main> */}
     </div>
   )
 }
