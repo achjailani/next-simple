@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -17,23 +18,23 @@ const Home: NextPage = () => {
         <Welcome></Welcome>
 
         <div className={styles.grid}>
-          <a href="/pdf/viewer" className={styles.card}>
+          <Link href="/pdf/viewer" className={styles.card}>
             <h2>Pdf Viewer &rarr;</h2>
             <p>Find in-depth how to view pdf shitly and get desired coordinate</p>
-          </a>
+          </Link>
 
-          <a href="/pdf/nano-coverter" className={styles.card}>
+          <Link href="/pdf/nano-coverter" className={styles.card}>
             <h2>Convert to Hell &rarr;</h2>
             <p>Convert Lower Left Y, Lower Left X, Upper Right Y, Upper Right X to X Y coordinate</p>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#"
             className={styles.card}
           >
             <h2>Convert to Jail &rarr;</h2>
             <p>Convert X Y coordinate to Lower Left Y, Lower Left X, Upper Right Y, Upper Right X.</p>
-          </a>
+          </Link>
         </div>
       </main>
 
