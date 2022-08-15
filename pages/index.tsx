@@ -19,36 +19,44 @@ const Home: NextPage = () => {
 
         <div className={styles.grid}>
           <Link href="/pdf/viewer" className={styles.card}>
-            <h2>Pdf Viewer &rarr;</h2>
-            <p>Find in-depth how to view pdf shitly and get desired coordinate</p>
+            <a>
+              <h2>Pdf Viewer &rarr;</h2>
+              <p>Find in-depth how to view pdf shitly and get desired coordinate</p>
+            </a>
           </Link>
 
-          <Link href="/pdf/nano-coverter" className={styles.card}>
-            <h2>Convert to Hell &rarr;</h2>
-            <p>Convert Lower Left Y, Lower Left X, Upper Right Y, Upper Right X to X Y coordinate</p>
+          <Link href="pdf/nano-coverter" className={styles.card}>
+            <a>
+              <h2>Convert to Hell &rarr;</h2>
+              <p>Convert Lower Left Y, Lower Left X, Upper Right Y, Upper Right X to X Y coordinate</p>
+            </a>
           </Link>
 
           <Link
             href="#"
             className={styles.card}
           >
-            <h2>Convert to Jail &rarr;</h2>
-            <p>Convert X Y coordinate to Lower Left Y, Lower Left X, Upper Right Y, Upper Right X.</p>
+            <a>
+              <h2>Convert to Jail &rarr;</h2>
+              <p>Convert X Y coordinate to Lower Left Y, Lower Left X, Upper Right Y, Upper Right X.</p>
+            </a>
           </Link>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <Link 
+        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        target="_blank"
+        rel="noopener noreferrer">
+        <a>
           Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+      </Link>
+        
       </footer>
     </div>
   )
