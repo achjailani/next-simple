@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@types/formidable": "^2.0.5",
+    "antd": "^4.22.4",
+    "formidable": "^2.0.1",
     "next": "12.2.5",
+    "pdf-lib": "^1.17.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
